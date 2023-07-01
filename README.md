@@ -1,52 +1,23 @@
-Bank Statement Reader
-This program reads a customer's checking account transactions from a .dat file and prepares a statement at the end of each month. It displays the account number, opening balance, each transaction, service fees, interest, and closing balance.
+# Bank Statement Reader
 
-Features
-Reads account data from a .dat file in the specified format.
-Calculates the closing balance by applying transactions and updating the balance.
-Applies service fees of R25 if the balance goes below R1000 during the month.
-Tracks and displays interest earned by the account.
-Prints the account statement with transaction details and the closing balance.
-Input Format
-The program expects the input file to have the following format:
+This program generates a statement for a customer's checking account at the end of each month based on the transactions stored in a `.dat` file.
 
-python
-Copy code
-AccountNumber OpeningBalance
-TransactionCode1 TransactionAmount1
-TransactionCode2 TransactionAmount2
-...
-The first line contains the account number and the opening balance.
-Each subsequent line contains a transaction code and the corresponding transaction amount.
-The transaction codes are as follows:
+## Features
 
-W: Withdrawal
-D: Deposit
-I: Interest
-Usage
-Ensure that the input file "Transactions.dat" is in the same directory as the program.
-Compile and run the program.
-The program will read the account data from the input file and display the account statement on the console.
-Example Output
-yaml
-Copy code
-Account number: 46780976
+- Reads account information and transactions from a `.dat` file.
+- Calculates the account balance after each transaction.
+- Applies service fees when the balance goes below R 1000.
+- Calculates and displays interest earned by the account.
+- Prints the account statement with transaction details and closing balance.
 
-Opening balance: 3750.40
+## Usage
 
-Transaction      Amount       Balance          Bank costs
-Withdrawal       250.00       3500.40
-Deposit          1200.00      4700.40
-Withdrawal       75.00        4625.40
-Withdrawal       375.00       4250.40
-Deposit          1200.00      5450.40
-Interest         5.50         5455.90
-Withdrawal       400.00       5055.90
-Withdrawal       600.00       4455.90          25.00
-Deposit          450.50       4905.40
+1. Ensure you have the necessary dependencies installed.
+2. Compile and run the program.
+3. Enter the filename of the transaction data file (`.dat` format).
+4. View the generated account statement on the console.
 
-Closing balance: R4905.40
-Note: The "Bank costs" column displays the service fees deducted when the balance goes below R1000.
+## Transaction Data Format
 
-Dependencies
-The program requires a C++ compiler and standard libraries.
+The transaction data is stored in the following format in the `.dat` file:
+
